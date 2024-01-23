@@ -73,7 +73,7 @@ export default function IndexPage() {
         <form
           onSubmit={(e) => {
             e.preventDefault()
-            router.push(`/`)
+            router.push(`${value}/${address}/overview/`)
           }}
         >
           <Flex direction="column" gap="3">

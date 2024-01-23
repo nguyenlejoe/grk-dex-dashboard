@@ -79,3 +79,8 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+@media (min-width: 768px) {
+  .md\\:flex-row {
+    flex-direction: row;
+  }
+}

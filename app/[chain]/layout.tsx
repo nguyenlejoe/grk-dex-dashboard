@@ -18,8 +18,12 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const handleTabSwitch = (route: string) => {
     const routeSegments = pathname.split('/');
     routeSegments[3] = route;
+    if(routeSegments.length > 4){
+      routeSegments.pop();
+    }
     const newRoute = routeSegments.join('/');
-    router.push(newRoute)
+    router.push(newRoute);
+    
   }
 
   return (

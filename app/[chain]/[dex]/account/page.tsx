@@ -5,7 +5,7 @@ import { XYKPoolListView, XYKTokenListView  } from "@covalenthq/goldrush-kit";
 import { Flex } from "@radix-ui/themes";
 import { Button } from "@/components/ui/button";
 
-export default function Overview({ params }: { params: { chain: string, dex: string } }) {
+export default function Account({ params }: { params: { chain: string, dex: string } }) {
   const router = useRouter();
 
   return (

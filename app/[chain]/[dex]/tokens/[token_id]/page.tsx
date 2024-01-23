@@ -5,7 +5,7 @@ import { XYKTokenListView  } from "@covalenthq/goldrush-kit";
 import { Flex } from "@radix-ui/themes";
 import { Button } from "@/components/ui/button";
 
-export default function Tokens({ params }: { params: { chain: string, dex: string } }) {
+export default function Token({ params }: { params: { chain: string, dex: string, token_id: string} }) {
   const router = useRouter();
 
   return (
