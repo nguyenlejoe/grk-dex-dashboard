@@ -6,7 +6,7 @@ import { ChainItem, CovalentClient } from "@covalenthq/client-sdk"
 import { Flex } from "@radix-ui/themes"
 import { Check, ChevronsUpDown } from "lucide-react"
 
-import { NftContext } from "@/lib/store"
+import { DexContext } from "@/lib/store"
 import { COVALENT_API_KEY, cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -26,9 +26,9 @@ import {
 import { useToast } from "@/components/ui/use-toast"
 
 export default function IndexPage() {
-  const { nftAddress } = useContext(NftContext)
+  const { dex_name } = useContext(DexContext)
   const [allChains, setChains] = useState<ChainItem[]>([])
-  const [address, setAddress] = useState(nftAddress ? nftAddress : "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D")
+  const [address, setAddress] = useState(dex_name ? dex_name : "uniswap_v2")
   const [busy, setBusy] = useState(false)
   const router = useRouter()
   const [open, setOpen] = useState(false)
@@ -64,7 +64,7 @@ export default function IndexPage() {
     <section className="container flex flex-col justify-center gap-6 md:py-10 h-[calc(100vh-150px)] items-center ">
       <Flex direction="column" gap="4">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          GoldRush NFT Gallery UI
+          GoldRush Dex UI
         </h1>
         <p className="max-w-[700px] text-lg text-muted-foreground">
           Accessible and customizable components that you can copy and paste
@@ -73,7 +73,7 @@ export default function IndexPage() {
         <form
           onSubmit={(e) => {
             e.preventDefault()
-            router.push(`/collection/${value}/${address}`)
+            router.push(`/`)
           }}
         >
           <Flex direction="column" gap="3">
@@ -118,12 +118,12 @@ export default function IndexPage() {
                 </Command>
               </PopoverContent>
             </Popover>
-            <Label htmlFor="contract_address">Contract Address</Label>
+            <Label htmlFor="dex_name">Dex name</Label>
             <Input
               className="w-[400px]"
               type="input"
               id="address"
-              placeholder="Contract Address"
+              placeholder="Dex name"
               value={address}
               onChange={(e) => {
                 setAddress(e.target.value)

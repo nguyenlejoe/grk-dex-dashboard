@@ -6,9 +6,9 @@ import { KeyDialog } from "@/components/key-dialog"
 
 import { COVALENT_API_KEY } from "./utils"
 
-interface NftContextType {
-  nftAddress: string
-  setnftAddress: Function
+interface DexContextType {
+  dex_name: string
+  setDex: Function
   chains: any
   setChains: Function
   tableState: { [key: string]: boolean }
@@ -19,15 +19,15 @@ interface NftContextType {
   borderRadius: string
 }
 
-export const NftContext = createContext<NftContextType>({} as NftContextType)
+export const DexContext = createContext<DexContextType>({} as DexContextType)
 
-interface NftProviderProps {
+interface DexProviderProps {
   children: ReactNode
 }
 
-export const NftProvider: React.FC<NftProviderProps> = ({ children }) => {
+export const NftProvider: React.FC<DexProviderProps> = ({ children }) => {
   const { theme } = useTheme()
-  const [nftAddress, setnftAddress] = useState<string>("")
+  const [dex, setDex] = useState<string>("")
   const [chains, setChains] = useState<[]>([])
   const [tableState, setTableState] = useState({})
   const [color, setColor] = useState<any>("slate")
@@ -42,10 +42,10 @@ export const NftProvider: React.FC<NftProviderProps> = ({ children }) => {
       color={color}
       border_radius={borderRadius}
     >
-      <NftContext.Provider
+      <DexContext.Provider
         value={{
-          nftAddress,
-          setnftAddress,
+          dex_name: dex,
+          setDex,
           chains,
           setChains,
           tableState,
@@ -57,7 +57,7 @@ export const NftProvider: React.FC<NftProviderProps> = ({ children }) => {
         }}
       >
         {children}
-      </NftContext.Provider>
+      </DexContext.Provider>
     </GoldRushProvider>
   )
 }
