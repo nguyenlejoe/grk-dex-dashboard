@@ -10,7 +10,7 @@ import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
 import "@radix-ui/themes/styles.css"
-import { NftProvider } from "@/lib/store"
+import { DexProvider } from "@/lib/store"
 import { Toaster } from "@/components/ui/toaster"
 import { KeyDialog } from "@/components/key-dialog"
 import { Footer } from '@/components/footer';
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <Theme>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <NftProvider>
+              <DexProvider>
                 <div className="relative flex min-h-screen flex-col">
                   <SiteHeader />
                   <div className="flex-1">{children}</div>
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   <KeyDialog />
                   <Toaster />
                 </div>
-              </NftProvider>
+              </DexProvider>
             </ThemeProvider>
           </Theme>
         </body>

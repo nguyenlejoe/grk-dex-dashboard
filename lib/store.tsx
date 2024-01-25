@@ -25,7 +25,7 @@ interface DexProviderProps {
   children: ReactNode
 }
 
-export const NftProvider: React.FC<DexProviderProps> = ({ children }) => {
+export const DexProvider: React.FC<DexProviderProps> = ({ children }) => {
   const { theme } = useTheme()
   const [dex, setDex] = useState<string>("")
   const [chains, setChains] = useState<[]>([])

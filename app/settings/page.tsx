@@ -4,13 +4,13 @@ import { useContext } from "react"
 import { useRouter } from "next/navigation"
 import { Flex } from "@radix-ui/themes"
 
-import { NftContext } from "@/lib/store"
+import { DexContext } from "@/lib/store"
 import { BORDER_RADIUS, COLORS } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 export default function Settings({ params }: { params: { slug: string } }) {
   const { setColor, color, borderRadius, setBorderRadius } =
-    useContext(NftContext)
+    useContext(DexContext)
   const router = useRouter()
 
   return (
