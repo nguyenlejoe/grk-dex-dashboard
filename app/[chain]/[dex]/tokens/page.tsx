@@ -1,12 +1,12 @@
 'use client'
-import { Chain } from "@covalenthq/client-sdk"
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { XYKTokenListView  } from "@covalenthq/goldrush-kit";
 import { Flex } from "@radix-ui/themes";
 import { Button } from "@/components/ui/button";
 
 export default function Tokens({ params }: { params: { chain: string, dex: string } }) {
   const router = useRouter();
+  const pathname = usePathname()
 
   return (
     <div className="w-full flex flex-col gap-4">
@@ -16,6 +16,9 @@ export default function Tokens({ params }: { params: { chain: string, dex: strin
         <XYKTokenListView
           chain_name={params.chain}
           dex_name={params.dex}
+          on_token_click={(e: any)=>{
+            router.push(`${pathname}/${e}`)
+          }}
         />
         <Flex onClick={()=>{
           router.back()

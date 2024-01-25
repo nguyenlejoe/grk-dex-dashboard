@@ -1,7 +1,6 @@
 'use client'
-import { Chain } from "@covalenthq/client-sdk"
 import { useRouter } from "next/navigation";
-import { XYKTokenListView  } from "@covalenthq/goldrush-kit";
+import { XYKTokenPoolListView, XYKTokenTransactionsListView  } from "@covalenthq/goldrush-kit";
 import { Flex } from "@radix-ui/themes";
 import { Button } from "@/components/ui/button";
 
@@ -11,11 +10,26 @@ export default function Token({ params }: { params: { chain: string, dex: string
   return (
     <div className="w-full flex flex-col gap-4">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Tokens
+          Token
         </h1>
-        <XYKTokenListView
+        <h2 className="text-xl font-extrabold leading-tight tracking-tighter md:text-2xl">
+          Pools
+        </h2>
+        <XYKTokenPoolListView
           chain_name={params.chain}
           dex_name={params.dex}
+          token_address={params.token_id}
+          on_pool_click={(e: any)=>{
+            router.push(`/${params.chain}/${params.dex}/pools/${e}`)
+          }}
+        />
+        <h2 className="text-xl font-extrabold leading-tight tracking-tighter md:text-2xl">
+          Transactions
+        </h2>
+        <XYKTokenTransactionsListView
+          chain_name={params.chain}
+          dex_name={params.dex}
+          token_address={params.token_id}
         />
         <Flex onClick={()=>{
           router.back()

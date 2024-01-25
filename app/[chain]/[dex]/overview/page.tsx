@@ -19,6 +19,9 @@ export default function Overview({ params }: { params: { chain: string, dex: str
         <XYKTokenListView
           chain_name={params.chain}
           dex_name={params.dex}
+          on_token_click={(e: any)=>{
+            router.push(`/${params.chain}/${params.dex}/tokens/${e}`)
+          }}
         />
         <h2 className="text-xl font-extrabold leading-tight tracking-tighter md:text-2xl">
           Pools
@@ -26,6 +29,9 @@ export default function Overview({ params }: { params: { chain: string, dex: str
         <XYKPoolListView
           chain_name={params.chain}
           dex_name={params.dex}
+          on_pool_click={(e: any)=>{
+            router.push(`/${params.chain}/${params.dex}/pools/${e}`)
+          }}
         />
         <Flex onClick={()=>{
           router.back()
