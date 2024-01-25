@@ -1,5 +1,4 @@
 'use client'
-import { Chain } from "@covalenthq/client-sdk"
 import { useRouter } from "next/navigation";
 import { XYKPoolDetailView, XYKPoolTransactionsListView, XYKTokenListView  } from "@covalenthq/goldrush-kit";
 import { Flex } from "@radix-ui/themes";
