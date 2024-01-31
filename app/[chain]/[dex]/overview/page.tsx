@@ -1,7 +1,7 @@
 'use client'
 import { Chain } from "@covalenthq/client-sdk"
 import { useRouter } from "next/navigation";
-import { XYKPoolListView, XYKTokenListView  } from "@covalenthq/goldrush-kit";
+import { XYKOverviewTimeSeries, XYKOverviewTransactionsListView, XYKPoolListView, XYKTokenListView  } from "@covalenthq/goldrush-kit";
 import { Flex } from "@radix-ui/themes";
 import { Button } from "@/components/ui/button";
 
@@ -13,6 +13,18 @@ export default function Overview({ params }: { params: { chain: string, dex: str
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
           Overview
         </h1>
+        <div className="flex gap-4">
+          <XYKOverviewTimeSeries
+            chain_name={params.chain}
+            dex_name={params.dex}
+            displayMetrics={"liquidity"}
+          />
+          <XYKOverviewTimeSeries
+            chain_name={params.chain}
+            dex_name={params.dex}
+            displayMetrics={"volume"}
+          />
+        </div>
         <h2 className="text-xl font-extrabold leading-tight tracking-tighter md:text-2xl">
           Tokens
         </h2>
@@ -32,6 +44,13 @@ export default function Overview({ params }: { params: { chain: string, dex: str
           on_pool_click={(e: any)=>{
             router.push(`/${params.chain}/${params.dex}/pools/${e}`)
           }}
+        />
+        <h2 className="text-xl font-extrabold leading-tight tracking-tighter md:text-2xl">
+          Transactions
+        </h2>
+        <XYKOverviewTransactionsListView
+          chain_name={params.chain}
+          dex_name={params.dex}
         />
         <Flex onClick={()=>{
           router.back()

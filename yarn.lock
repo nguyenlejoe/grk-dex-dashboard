@@ -220,26 +220,25 @@
     rollup-plugin-typescript2 "^0.35.0"
     typescript "^5.1.6"
 
-"@covalenthq/client-sdk@^0.7.5":
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/@covalenthq/client-sdk/-/client-sdk-0.7.5.tgz#71cf928ef7ea10895ca10a87b0736cf1672a1dd6"
-  integrity sha512-5VF4ylHLj3GdLy3vUjv2OIa8w+im7uN7RKzKR9DrFK04A9Um0zN0sKAc44WC/Jgh6JZ9mF2uTQOw1HnWkm1jmw==
+"@covalenthq/client-sdk@^0.8.4":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@covalenthq/client-sdk/-/client-sdk-0.8.4.tgz#a8b7adab344266a375fba206d4bbf748c253935c"
+  integrity sha512-LO9lqmE0Yn59hTbiWnQ66kdph+6ryF4xDkpyQ0bg3xvguWnANVyUJ1igoIw3dE32slySu7/ewELi42NELJCEUg==
   dependencies:
     "@rollup/plugin-commonjs" "^25.0.4"
     "@rollup/plugin-node-resolve" "^15.2.1"
     big.js "^6.2.1"
-    chalk "^4.1.2"
     date-fns "^2.30.0"
     rollup "^3.29.1"
     rollup-plugin-typescript2 "^0.35.0"
     typescript "^5.1.6"
 
-"@covalenthq/goldrush-kit@^0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@covalenthq/goldrush-kit/-/goldrush-kit-0.3.4.tgz#2f49a614bcaf9e6fe1c7b4dfd9a31a0043040812"
-  integrity sha512-1XGMsRvU1CdJgFi146Q+aJnpLm/ojC7W4QwuQijgCxnwJuYotM92WkQordGKCV/l7s9LZcpyoF4JrVU2reMbKw==
+"@covalenthq/goldrush-kit@^0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@covalenthq/goldrush-kit/-/goldrush-kit-0.3.6.tgz#2bfa8fb2688de096c9936952c6c1bfd845ae002e"
+  integrity sha512-ROTIMtFJKvLFze7CskcE13ZMwPpGJ9Qp8dl/HHqFINK2xc/nyyeEcmPyGxs19MsQeu09q1JB7cF04cAJBgVABw==
   dependencies:
-    "@covalenthq/client-sdk" "^0.7.5"
+    "@covalenthq/client-sdk" "^0.8.4"
     "@headlessui/react" "^1.7.17"
     "@radix-ui/react-avatar" "^1.0.4"
     "@radix-ui/react-checkbox" "^1.0.4"

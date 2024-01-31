@@ -1,6 +1,6 @@
 'use client'
 import { useRouter } from "next/navigation";
-import { XYKWalletTransactionsListView, XYKWalletPoolListView  } from "@covalenthq/goldrush-kit";
+import { XYKWalletTransactionsListView, XYKWalletPoolListView, XYKWalletInformation  } from "@covalenthq/goldrush-kit";
 import { Flex } from "@radix-ui/themes";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -35,6 +35,11 @@ export default function Account({ params }: { params: { chain: string, dex: stri
             setAddress(input)
           }}>Load account details</Button>
         </Flex>
+        <XYKWalletInformation
+          chain_name={params.chain}
+          dex_name={params.dex}
+          wallet_address={walletAddress}
+        />
         <h2 className="text-xl font-extrabold leading-tight tracking-tighter md:text-2xl">
           Pools
         </h2>

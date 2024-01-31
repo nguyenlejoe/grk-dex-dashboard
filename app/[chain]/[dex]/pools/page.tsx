@@ -17,6 +17,7 @@ export default function Pools({ params }: { params: { chain: string, dex: string
         <XYKPoolListView
           chain_name={params.chain}
           dex_name={params.dex}
+          page_size={20}
           on_pool_click={(e: any)=>{
             router.push(`${pathname}/${e}`)
           }}

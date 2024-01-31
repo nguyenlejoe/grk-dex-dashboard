@@ -16,6 +16,7 @@ export default function Tokens({ params }: { params: { chain: string, dex: strin
         <XYKTokenListView
           chain_name={params.chain}
           dex_name={params.dex}
+          page_size={20}
           on_token_click={(e: any)=>{
             router.push(`${pathname}/${e}`)
           }}
