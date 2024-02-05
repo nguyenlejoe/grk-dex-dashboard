@@ -14,31 +14,25 @@
 
 <!-- Additional sections of your README -->
 
-
-
 </div>
 
 <br/>
 
-<h1 align="center">Beautifully designed NFT Gallery template.</h1>
+<h1 align="center">Beautifully designed uniswap dex dashboard template.</h1>
 
 <div align="center">
-Powered by GoldRush Kit. Open-source. Customizable. 200+ Chains.
+Powered by <span><a href="https://github.com/covalenthq/goldrush-kit">GoldRush Kit.</a></span> Open-source. Customizable. 200+ Chains.
 </div>
 
 ## Ready-to-use customizable template
 
 <a href="https://goldrush-nft-gallery-ui.vercel.app/">View live template</a>
 
-<img alt="GoldRush NFT List" src="https://raw.githubusercontent.com/covalenthq/goldrush-nft-gallery-ui/main/static/grk-nft-list.png" style="max-width: 100%;"/>
-
-<img alt="GoldRush NFT Detail" src="https://raw.githubusercontent.com/covalenthq/goldrush-nft-gallery-ui/main/static/grk-nft-detail.png" style="max-width: 100%;"/>
-
 ## One-click deploy
 
 Deploy your own NFT Gallery UI.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcovalenthq%2Fgoldrush-nft-gallery-ui&env=NEXT_PUBLIC_COVALENT_API_KEY&envDescription=Visit%20Covalent%20to%20sign%20up%20for%20an%20API%20key&envLink=https%3A%2F%2Fwww.covalenthq.com%2Fplatform%2Fauth%2Fregister%2F)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnguyenlejoe%2Fgrk-dex-dashboard&env=NEXT_PUBLIC_COVALENT_API_KEY&envDescription=Visit%20Covalent%20to%20sign%20up%20for%20an%20API%20key&envLink=https%3A%2F%2Fwww.covalenthq.com%2Fplatform%2Fauth%2Fregister%2F)
 
 ## Local Setup
 
@@ -54,7 +48,7 @@ npm run dev
 
 ## Documentation
 
-Visit GoldRush's [component documentation](https://www.covalenthq.com/docs/unified-api/goldrush/kit/gold-rush-provider/) or [github](https://github.com/covalenthq/goldrush-kit)  for more information.
+Visit GoldRush's [component documentation](https://www.covalenthq.com/docs/unified-api/quickstart/goldrush-kit/) or [github](https://github.com/covalenthq/goldrush-kit)  for more information.
 
 ## Features
 
